@@ -16,11 +16,10 @@ export default function OtherTaskInput({ createItem, className }: TaskInputProps
   const { register, handleSubmit, reset } = useForm<TaskInputForm>();
 
   const onSubmit = (data: TaskInputForm) => {
-    let newItem: Todo = {
-        stuff :" Hello " 
-    //   Task: data.task,
-    //   Id: new Date().getTime().toString(),
-    //   completed: false
+    let newItem: Todo = { 
+      Task: data.task,
+      Id: new Date().getTime().toString(),
+      completed: false
     };
 
     createItem(newItem);
